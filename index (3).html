@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подсчет калорий</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>
+        <i class="fas fa-apple-alt"></i> Подсчет калорий <i class="fas fa-utensils"></i>
+    </h1>
+</header>
+
+<main>
+    <section class="form-section">
+        <h2>Добавить продукт</h2>
+        <form id="food-form" aria-label="Форма добавления продукта">
+            <div class="form-group">
+                <label for="name">Наименование:</label>
+                <input type="text" id="name" required placeholder="Введите наименование продукта">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Вес (г):</label>
+                <input type="number" id="weight" required min="0" placeholder="Введите вес в граммах">
+            </div>
+
+            <div class="form-group">
+                <label for="calories">Калорийность:</label>
+                <input type="number" id="calories" required min="0" placeholder="Введите калорийность">
+            </div>
+
+            <div class="form-group">
+                <label for="fats">Жиры (г):</label>
+                <input type="number" id="fats" required min="0" placeholder="Введите количество жиров">
+            </div>
+
+            <div class="form-group">
+                <label for="proteins">Белки (г):</label>
+                <input type="number" id="proteins" required min="0" placeholder="Введите количество белков">
+            </div>
+
+            <div class="form-group">
+                <label for="carbs">Углеводы (г):</label>
+                <input type="number" id="carbs" required min="0" placeholder="Введите количество углеводов">
+            </div>
+
+            <button type="button" id="addButton" class="btn">Добавить продукт</button>
+        </form>
+    </section>
+
+    <section class="table-section">
+        <h2>Список продуктов</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Наименование</th>
+                    <th>Вес (г)</th>
+                    <th>Калорийность</th>
+                    <th>Жиры (г)</th>
+                    <th>Белки (г)</th>
+                    <th>Углеводы (г)</th>
+                </tr>
+            </thead>
+            <tbody id="food-list">
+                <!-- Продукты будут добавляться сюда -->
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Подсчет калорий. Все права защищены.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
